@@ -4,7 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-
+import { browserHistory } from 'react-router'
 
 export default class TheNewestColumn extends React.Component{
   render() {
@@ -12,7 +12,9 @@ export default class TheNewestColumn extends React.Component{
     <div style={{
       border: '1px solid #aaa'
     }}>
-      <h3>The Newest</h3>
+      <h3 onClick={
+        () => browserHistory.push('/detail')
+      }>The Newest</h3>
       <p>
         <Link to='/detail'>detail 1</Link>
       </p>
